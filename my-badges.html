@@ -1,13 +1,21 @@
 <link rel="import" href="../polymer/polymer-element.html">
-
+<link rel="import" href="../my-style/my-style.html">
 <dom-module id="my-badges">
   <template>
-    <style>
-      :host {
-        display: block;
+    <style include="my-style">
+      .label{
+        font-family: CSChatThaiUI;
+        padding: 0.2rem 0.6rem 0.3rem 0.6rem;
+        display: inline;
+        font-size: 75%;
+        border-radius:0.25rem;
+      }
+      .label-default{
+        background-color: #777777;
+        color: var(--bg-color-white);
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <span class="label label-default"><slot></slot></span>
   </template>
 
   <script>
